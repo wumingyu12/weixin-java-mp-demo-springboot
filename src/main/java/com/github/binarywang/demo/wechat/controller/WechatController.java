@@ -46,8 +46,9 @@ public class WechatController {
 
     return "非法请求";
   }
-
-  @PostMapping(produces = "application/xml; charset=UTF-8")
+  
+  //@PostMapping(produces = "application/xml; charset=UTF-8")
+  @PostMapping(produces = "text/xml; charset=UTF-8")
   public String post(@RequestBody String requestBody,
                      @RequestParam("signature") String signature,
                      @RequestParam("timestamp") String timestamp,
